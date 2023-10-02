@@ -5,11 +5,11 @@
 ;numerico da tastiera (composto da una cifra) 
 ;stampi tutti i numeri inferiori a quello.
 
-org 100h  
+org 100h    ;inizio il programma all indirizzo 100h
 
-mov ah,1    ;prendo in input un carattere
+mov ah,1    ;prendo in input un numero
 int 21h
-mov cl,al   
+mov cl,al   ;metto il numero come contatore, ma è codificato in ascii... quindi...   
 sub cl,30h  ;levo 30h per far diventare il numero compreso tra 0 e 9
 inizio:     ;inizio il loop
 mov dl,al  
