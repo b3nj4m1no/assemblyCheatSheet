@@ -1,9 +1,9 @@
 ;Gasparetti  
 
 ;compito: 
-;leggere 5 caratteri da tastiera
-;memorizzarli in celle di memoria successive
-;e stamparli a schermo 
+;Leggi 5 caratteri dalla tastiera e 
+;visualizzali sullo schermo a partire dall’ultimo
+;fino al primo (in ordine inverso)
 
 ;inizio il programma all indirizzo 100h
 org 100h
