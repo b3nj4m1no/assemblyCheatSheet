@@ -28,6 +28,17 @@ inc [201h]
 mov dl, 'M' ;spostiamo in dl (data register) il carattere che vogliamo stampare
 mov ah,2    ;stampiamo
 int 21h
+
+mov bl,31h ;imposto come valore del registro BL 31h (il numero 1 codificato in ASCII)
+
+mov cx,10 ;imposto il contatore del loop a 10 iterazioni
+stampaNumeri: ;inizio il loop
+ mov dl,bl ;copio il contenuto di BL in DL (preparo DL per andare a stampare)
+ mov ah,2 ;stampo il carattere
+ int 21h
+ inc bl ;ad ogni iterazione incremento BL
+ ;questo loop stamperà 123456789
+loop stampaNumeri ;termino il loop
  
 ;terminare il programma e torno al controllo del sistema operativo
 ret 
